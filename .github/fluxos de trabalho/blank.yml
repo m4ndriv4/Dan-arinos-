@@ -1,0 +1,18 @@
+
+whenSetup(function () {
+  makeAnonymousDanceSprite("SHARK", {x: 200, y: 200});
+});
+
+atTimestamp(4, "measures", function () {
+  changeMoveEachLR("SHARK", MOVES.Roll, -1);
+});
+
+atTimestamp(1, "measures", function () {
+  makeAnonymousDanceSprite("SLOTH", {x: 300, y: 200});
+  changeMoveEachLR("SLOTH", MOVES.Thriller, -1);
+});
+
+atTimestamp(2, "measures", function () {
+  makeAnonymousDanceSprite("CAT", {x: 100, y: 200});
+  changeMoveEachLR("CAT", MOVES.Clown, -1);
+});
